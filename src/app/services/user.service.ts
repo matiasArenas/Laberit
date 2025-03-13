@@ -40,7 +40,7 @@ export class UserService {
   async updateUser(id: number, updatedUser: User): Promise<void> {
     try {
       const users = await this.getUsers();
-      const index = users.findIndex(user => user.id === id); console.log(index)
+      const index = users.findIndex(user => user.id === id);
       if (index !== -1) {
         users[index] = updatedUser;
         this.usersInMemory = users;
@@ -52,8 +52,7 @@ export class UserService {
   }
 
   deleteUser(id: number): void {
-    console.log('service', id)
-    const index = this.usersInMemory.findIndex(user => user.id === id); console.log(index)
+    const index = this.usersInMemory.findIndex(user => user.id === id);
     if (index !== -1) {
       this.usersInMemory.splice(index, 1);
       this.downloadUsersFile();

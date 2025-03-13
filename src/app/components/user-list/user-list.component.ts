@@ -32,7 +32,7 @@ export class UserListComponent implements OnInit {
     this.loading = true;
     try {
       const users = await this.userService.getUsers();
-      this.dataSource.data = users; console.log(users)
+      this.dataSource.data = users;
       this.setPaginator();
     } catch (error) {
       this.error = 'Error al cargar los usuarios';
@@ -66,8 +66,7 @@ export class UserListComponent implements OnInit {
       data: { message: '¿Está seguro de que desea eliminar este usuario?' },
     });
     dialogRef.afterClosed().subscribe((result) => { 
-      console.log('asdasdasdasdasd',result)
-      if (result) { console.log(id)
+      if (result) {
         this.userService.deleteUser(id);
         this.setUserData();
       }

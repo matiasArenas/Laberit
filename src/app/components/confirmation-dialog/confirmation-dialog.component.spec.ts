@@ -10,7 +10,6 @@ describe('ConfirmationDialogComponent', () => {
   let mockData: { message: string };
 
   beforeEach(async () => {
-    // Creamos un espía de MatDialogRef
     dialogRefSpy = jasmine.createSpyObj('MatDialogRef', ['close']);
     mockData = { message: 'Are you sure you want to proceed?' };
 
