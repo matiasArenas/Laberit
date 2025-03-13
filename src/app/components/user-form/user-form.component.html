@@ -1,0 +1,151 @@
+<div class="container">
+    <div class="title">{{title}}</div>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+        <h3>Datos de seguro</h3>
+        <div class="form-group">
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Tipo de Usuario:</mat-label>
+                    <mat-select id="type" formControlName="type" (selectionChange)="onUserTypeChange($event)">
+                        <mat-option value="paciente">Paciente</mat-option>
+                        <mat-option value="profesional">Profesional</mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="userForm.get('type')?.hasError('required')">El tipo de usuario es obligatorio</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre:</mat-label>
+                    <input matInput id="firstName" formControlName="firstName" type="text">
+                    <mat-error *ngIf="userForm.get('firstName')?.hasError('required')">El nombre es obligatorio</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Apellido 1:</mat-label>
+                    <input matInput id="lastName1" formControlName="lastName1" type="text">
+                    <mat-error *ngIf="userForm.get('lastName1')?.hasError('required')">El primer apellido es obligatorio</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Apellido 2:</mat-label>
+                    <input matInput id="lastName2" formControlName="lastName2" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Fecha de Nacimiento:</mat-label>
+                    <input matInput id="birthDate" formControlName="birthDate" type="date">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Género:</mat-label>
+                    <mat-select formControlName="gender" id="gender">
+                        <mat-option value="masculino">Masculino</mat-option>
+                        <mat-option value="femenino">Femenino</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>NIF/Pasaporte:</mat-label>
+                    <input matInput id="nif" formControlName="nif" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr" *ngIf="!isProfessional()">
+                <mat-form-field appearance="fill">
+                    <mat-label>NHC:</mat-label>
+                    <input matInput id="nhc" formControlName="nhc" type="text">
+                    <mat-error *ngIf="userForm.get('nhc')?.hasError('required')">El NHC es obligatorio</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="mr" *ngIf="isProfessional()">
+                <mat-form-field appearance="fill">
+                    <mat-label>Número de Colegio:</mat-label>
+                    <input matInput id="collegeNumber" formControlName="collegeNumber" type="text">
+                    <mat-error *ngIf="userForm.get('collegeNumber')?.hasError('required')">El número de colegio es obligatorio</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="mr" *ngIf="isProfessional()">
+                <mat-form-field appearance="fill">
+                    <mat-label>Tipo Profesional:</mat-label>
+                    <mat-select formControlName="professionalType">
+                        <mat-option value="medico">Médico</mat-option>
+                        <mat-option value="enfermero">Enfermero</mat-option>
+                        <mat-option value="administrativo">Administrativo</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+
+        <h3>Datos de región</h3>
+        <div formGroupName="address" class="form-group">
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Ciudad:</mat-label>
+                    <input matInput id="city" formControlName="city" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Calle:</mat-label>
+                    <input matInput id="street" formControlName="street" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Puerta:</mat-label>
+                    <input matInput id="door" formControlName="door" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Número:</mat-label>
+                    <input matInput id="number" formControlName="number" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Código Postal:</mat-label>
+                    <input matInput id="postalCode" formControlName="postalCode" type="text">
+                </mat-form-field>
+            </div>
+        </div>
+
+        <h3>Datos de seguro</h3>
+        <div formGroupName="insurers" class="form-group">
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nombre del Seguro:</mat-label>
+                    <input matInput id="name" formControlName="name" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Número de Tarjeta:</mat-label>
+                    <input matInput id="cardNumber" formControlName="cardNumber" type="text">
+                </mat-form-field>
+            </div>
+            <div class="mr">
+                <mat-form-field appearance="fill">
+                    <mat-label>Tipo de Seguro:</mat-label>
+                    <mat-select formControlName="insuranceType">
+                        <mat-option value="salud">Salud</mat-option>
+                        <mat-option value="familiar">Familiar</mat-option>
+                        <mat-option value="dental">Dental</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <div>
+            <button mat-flat-button color="primary" class="mr" type="submit" [disabled]="userForm.invalid">
+                {{ buttonSubmitLabel }}
+            </button>
+            <button mat-raised-button class="mr" type="cancel" (click)="goToHome()">
+                Cancelar
+            </button>
+        </div>
+    </form>
+</div>

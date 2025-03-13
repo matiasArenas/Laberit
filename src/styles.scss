@@ -1,1 +1,51 @@
-/* You can add global styles to this file, and also import other style files */
+@use "@angular/material" as mat;
+
+html {
+    color-scheme: light dark;
+    @include mat.theme((color: mat.$violet-palette,
+            typography: Roboto,
+            density: 0,
+        ));
+}
+
+body {
+    background: var(--mat-sys-surface);
+    color: var(--mat-sys-on-surface);
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+}
+
+.mat-mdc-paginator-container {
+    justify-content: center !important;
+}
+
+.container {
+    margin: 48px 48px 48px 48px;
+}
+
+.mr {
+    margin-right: 16px;
+}
+
+.mt {
+    margin-top: 16px;
+}
+
+.d-row {
+    display: flex;
+    justify-content: row;
+    align-items: center;
+}
+
+.d-row {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 48px;
+}

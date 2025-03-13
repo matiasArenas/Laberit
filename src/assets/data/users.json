@@ -1,0 +1,232 @@
+[
+  {
+    "id": 1,
+    "firstName": "John",
+    "lastName1": "Doe",
+    "lastName2": "Smith",
+    "gender": "Hombre",
+    "birthDate": "1980-04-25",
+    "nif": "12345678A",
+    "type": "Paciente",
+    "address": {
+      "street": "Calle Principal",
+      "number": "123",
+      "door": "1A",
+      "postalCode": "28001",
+      "city": "Madrid"
+    },
+    "insurers": {
+      "name": "HealthCo",
+      "insuranceType": "Salud",
+      "cardNumber": "HC12345"
+    },
+    "nhc": "123456789",
+    "professionalType": null,
+    "collegeNumber": null
+  },
+  {
+    "id": 2,
+    "firstName": "Jane",
+    "lastName1": "Smith",
+    "lastName2": "Johnson",
+    "gender": "Mujer",
+    "birthDate": "1975-11-15",
+    "nif": "98765432B",
+    "type": "Profesional",
+    "address": {
+      "street": "Calle de la Salud",
+      "number": "45",
+      "door": "2B",
+      "postalCode": "28015",
+      "city": "Madrid"
+    },
+    "insurers": null,
+    "nhc": null,
+    "professionalType": "Médico",
+    "collegeNumber": "MD12345"
+  },
+  {
+    "id": 3,
+    "firstName": "Carlos",
+    "lastName1": "Gomez",
+    "lastName2": "Perez",
+    "gender": "Hombre",
+    "birthDate": "1992-08-10",
+    "nif": "23456789C",
+    "type": "Paciente",
+    "address": {
+      "street": "Calle Falsa",
+      "number": "50",
+      "door": "3D",
+      "postalCode": "08002",
+      "city": "Barcelona"
+    },
+    "insurers": {
+      "name": "HealthLife",
+      "insuranceType": "Salud",
+      "cardNumber": "HL98765"
+    },
+    "nhc": "987654321",
+    "professionalType": null,
+    "collegeNumber": null
+  },
+  {
+    "id": 4,
+    "firstName": "Ana",
+    "lastName1": "Lopez",
+    "lastName2": "Martinez",
+    "gender": "Mujer",
+    "birthDate": "1985-06-20",
+    "nif": "87654321D",
+    "type": "Profesional",
+    "address": {
+      "street": "Avenida de la Constitución",
+      "number": "102",
+      "door": "4A",
+      "postalCode": "28020",
+      "city": "Madrid"
+    },
+    "insurers": null,
+    "nhc": null,
+    "professionalType": "Enfermera",
+    "collegeNumber": "N12345"
+  },
+  {
+    "id": 5,
+    "firstName": "Miguel",
+    "lastName1": "Sánchez",
+    "lastName2": "Gonzalez",
+    "gender": "Hombre",
+    "birthDate": "1990-01-15",
+    "nif": "34567890E",
+    "type": "Paciente",
+    "address": {
+      "street": "Calle Gran Vía",
+      "number": "200",
+      "door": "5B",
+      "postalCode": "28013",
+      "city": "Madrid"
+    },
+    "insurers": {
+      "name": "MedCare",
+      "insuranceType": "Salud",
+      "cardNumber": "MC11223"
+    },
+    "nhc": "123123456",
+    "professionalType": null,
+    "collegeNumber": null
+  },
+  {
+    "id": 6,
+    "firstName": "Elena",
+    "lastName1": "Vazquez",
+    "lastName2": "Ruiz",
+    "gender": "Mujer",
+    "birthDate": "1982-03-02",
+    "nif": "45678901F",
+    "type": "Profesional",
+    "address": {
+      "street": "Calle de la Luna",
+      "number": "10",
+      "door": "1C",
+      "postalCode": "28004",
+      "city": "Madrid"
+    },
+    "insurers": null,
+    "nhc": null,
+    "professionalType": "Médico",
+    "collegeNumber": "MD23456"
+  },
+  {
+    "id": 7,
+    "firstName": "Luis",
+    "lastName1": "Mendoza",
+    "lastName2": "Torres",
+    "gender": "Hombre",
+    "birthDate": "1995-05-25",
+    "nif": "56789012G",
+    "type": "Paciente",
+    "address": {
+      "street": "Avenida del Sol",
+      "number": "12",
+      "door": "2A",
+      "postalCode": "31001",
+      "city": "Pamplona"
+    },
+    "insurers": {
+      "name": "DentalCare",
+      "insuranceType": "Dental",
+      "cardNumber": "DC67890"
+    },
+    "nhc": "112233445",
+    "professionalType": null,
+    "collegeNumber": null
+  },
+  {
+    "id": 8,
+    "firstName": "Laura",
+    "lastName1": "Fernandez",
+    "lastName2": "Serrano",
+    "gender": "Mujer",
+    "birthDate": "1991-07-12",
+    "nif": "67890123H",
+    "type": "Profesional",
+    "address": {
+      "street": "Calle del Mar",
+      "number": "77",
+      "door": "3C",
+      "postalCode": "08003",
+      "city": "Barcelona"
+    },
+    "insurers": null,
+    "nhc": null,
+    "professionalType": "Enfermera",
+    "collegeNumber": "N98765"
+  },
+  {
+    "id": 9,
+    "firstName": "Antonio",
+    "lastName1": "Ruiz",
+    "lastName2": "Alvarez",
+    "gender": "Hombre",
+    "birthDate": "1978-02-20",
+    "nif": "78901234J",
+    "type": "Paciente",
+    "address": {
+      "street": "Calle de la Paz",
+      "number": "15",
+      "door": "4D",
+      "postalCode": "29005",
+      "city": "Málaga"
+    },
+    "insurers": {
+      "name": "LifeCare",
+      "insuranceType": "Salud",
+      "cardNumber": "LC98765"
+    },
+    "nhc": "234567890",
+    "professionalType": null,
+    "collegeNumber": null
+  },
+  {
+    "id": 10,
+    "firstName": "Rosa",
+    "lastName1": "Pérez",
+    "lastName2": "Gómez",
+    "gender": "Mujer",
+    "birthDate": "1988-10-18",
+    "nif": "89012345K",
+    "type": "Profesional",
+    "address": {
+      "street": "Calle del Río",
+      "number": "34",
+      "door": "5E",
+      "postalCode": "28030",
+      "city": "Madrid"
+    },
+    "insurers": null,
+    "nhc": null,
+    "professionalType": "Administrativo",
+    "collegeNumber": "A12345"
+  }
+]
